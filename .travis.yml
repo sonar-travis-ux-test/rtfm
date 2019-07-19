@@ -1,0 +1,12 @@
+dist: trusty
+node_js: 8
+addons:
+  sonarcloud:
+    organization: "sonar-travis-ux-test"
+    token:
+      secure: "PXUyMjHq5bTiiY6xverP5kgT8ZaAjysdSFEIjchQUKknq4P3EDogNvH80vDJDF6MmXCHv0r5G5tFptZtRUHGsQSoAgSSH77Y209XoDJlBCv0gOaHm2SneIGHg5NJOmZZRYn+7GoBGJHGcMf/vTzJ+ULsqW+lMf2ixAIp+xf+TMm4vyx/FGybpO734yfQGxPwmlRghvpXdZUGu9l1eYxZfaAPWIhwd8NdN/bjpFpF1BeXyKKulqTmNGdwvp+xZGCVa2a05RrC5QgE+PV0t4D/wWA2BSCAWf25AAOV5bRp0SGAoF0nFOT+/rdOcv418YhtfcRqTIWbrsGXAC9xXxrQzsp165fqmkeed974hGeEmGaHzIJl/f+7CPDUNt/qdaigYg1ngyo10kpyfAfahQ0Vn0m5DUYnHPYy37GTlR9xTKA9u8gmzd1DF3IVo7gU10BieBR/zilzaL019vssgooH7zPrZpa/NSuObj/iXprlZu4HoWg/sXCSFT3999W3MOvueyH6o2Z/38IpPmByLHvecHWagohfh6mKFCzvJzRLPqtvrbOUaX2GlkkhZAGgUwnjN2vdiw/DfplwXZjYTmYXSet3Gn5E6XnsWJoP+ki4cMAIfZjsSL5acaQpNeHwtzj+L0eC3vzoXT5xWj8jJ/5NpgF/msSzNyoScQ+8axVsFCU="
+
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - sonar-scanner
+
